@@ -3,7 +3,7 @@ import { hot } from 'react-hot-loader';
 
 const Warning = React.lazy(() => import('./Warning'));
 
-function App(props) {
+function App() {
   const [count, setCount] = useState(0);
   return (
     <React.Fragment>
