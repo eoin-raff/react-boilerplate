@@ -1,11 +1,11 @@
-import React from "react";
-import { cleanup, render } from "@testing-library/react";
+import React from 'react';
+import { cleanup, render } from '@testing-library/react';
 
-import App from "./App";
+import App from './App';
 
 afterEach(cleanup);
-describe("App", () => {
-  it("renders without error", () => {
+describe('App', () => {
+  it('renders without error', () => {
     render(<App />);
   });
 });

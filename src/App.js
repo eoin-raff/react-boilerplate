@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { hot } from "react-hot-loader";
+import React, { useState } from 'react';
+import { hot } from 'react-hot-loader';
 
-const Warning = React.lazy(() => import("./Warning"));
+const Warning = React.lazy(() => import('./Warning'));
 
 function App(props) {
   const [count, setCount] = useState(0);
   return (
     <React.Fragment>
       <h1>Hello World</h1>
-      <h2 className={count > 10 ? "warning" : null}>Count: {count}</h2>
+      <h2 className={count > 10 ? 'warning' : null}>Count: {count}</h2>
       <button
         onClick={() => {
           setCount(count - 1);
