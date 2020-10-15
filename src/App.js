@@ -8,5 +8,5 @@ import React from "react";
 // export default App;
 
 export default function App(props){
-    return <h1>Hello world</h1>
+    return <h1>Hello World</h1>
 }
