@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { hot } from "react-hot-loader";
 
+const Warning = React.lazy(() => import("./Warning"));
+
 function App(props) {
   const [count, setCount] = useState(0);
   return (
@@ -21,7 +23,12 @@ function App(props) {
       >
         +
       </button>
+      {count > 10 && (
+        <React.Suspense fallback={null}>
+          <Warning />
+        </React.Suspense>
+      )}
     </React.Fragment>
   );
 }
-export default hot(module)(App)
+export default hot(module)(App);
