@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { hot } from "react-hot-loader";
 
-export default function App(props) {
+function App(props) {
   const [count, setCount] = useState(0);
   return (
     <React.Fragment>
-      <h1>Hello World.</h1>
-      <h2>Count: {count}</h2>
+      <h1>Hello World</h1>
+      <h2 className={count > 10 ? "warning" : null}>Count: {count}</h2>
       <button
         onClick={() => {
           setCount(count - 1);
@@ -23,3 +24,4 @@ export default function App(props) {
     </React.Fragment>
   );
 }
+export default hot(module)(App)
